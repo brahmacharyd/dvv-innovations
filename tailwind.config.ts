@@ -21,10 +21,10 @@ const config: Config = {
     },
     extend: {
 		fontFamily: {
-        sans: ["Inter", "sans-serif"],   // replace with "Poppins" if using that
+        sans: ["Inter", "sans-serif"],
       },
 	  fontWeight: {
-        semibold: "300", // 👈 now font-semibold = 500 instead of 600
+        semibold: "300",
       },
       colors: {
         border: "hsl(var(--border))",
