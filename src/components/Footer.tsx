@@ -1,118 +1,43 @@
-import { Separator } from "@/components/ui/separator";
-import AnimatedSection from "@/components/AnimatedSection";
-import { Globe, Mail, Phone, Linkedin, Twitter, Github, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-card/50 border-t border-border relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-10 right-20 w-40 h-40 bg-primary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-32 h-32 bg-accent rounded-full blur-3xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-6 py-16 relative">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <AnimatedSection animation="fade-in-left" className="md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4 hover:scale-105 transition-transform duration-300 cursor-pointer group">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                <span className="text-primary-foreground font-bold text-lg">D</span>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">DVV Innovations LLP</h3>
-                <p className="text-sm text-muted-foreground">Digital Visionary Ventures</p>
-              </div>
-            </div>
-            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
-              Transforming ideas into digital excellence through comprehensive technology solutions. 
-              From AI-driven platforms to cloud solutions, we architect the future of technology.
-            </p>
-            <div className="flex items-center space-x-4">
-              {[
-                { icon: Linkedin, href: "#" },
-                { icon: Twitter, href: "#" },
-                { icon: Github, href: "#" }
-              ].map((social, index) => {
-                const Icon = social.icon;
-                return (
-                  <a 
-                    key={index}
-                    href={social.href} 
-                    className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground hover:scale-110 hover:shadow-glow transition-all duration-300"
-                  >
-                    <Icon className="w-5 h-5" />
-                  </a>
-                );
-              })}
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fade-in" delay={200}>
-            <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">Services</h4>
-              <ul className="space-y-2 text-muted-foreground">
-                {[
-                  "Software Development",
-                  "Mobile Applications", 
-                  "Web Development",
-                  "AI Platforms",
-                  "Cloud Solutions",
-                  "IT Consulting"
-                ].map((service, index) => (
-                  <li key={index}>
-                    <a href="#services" className="hover:text-primary transition-all duration-300 hover:translate-x-1 inline-block">
-                      {service}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </AnimatedSection>
-
-          <AnimatedSection animation="fade-in-right" delay={400}>
-            <div>
-              <h4 className="text-lg font-semibold text-foreground mb-4">Contact Info</h4>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
-                  <Mail className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">info@dvvinnovations.com</span>
-                </div>
-                <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
-                  <Phone className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors group">
-                  <Globe className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
-                  <span className="text-sm">Global Services Available</span>
-                </div>
-              </div>
-            </div>
-          </AnimatedSection>
+    <footer className="border-t mt-16">
+      <div className="container mx-auto px-6 py-10 grid gap-8 md:grid-cols-4">
+        <div>
+          <h3 className="font-semibold mb-3">DVV Innovations LLP</h3>
+          <p className="text-sm text-muted-foreground">Digital Visionary Ventures — modern web & AI solutions.</p>
         </div>
-
-        <AnimatedSection animation="fade-in" delay={600}>
-          <Separator className="my-8" />
-
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-muted-foreground text-sm mb-4 md:mb-0 flex items-center gap-2">
-              © 2024 DVV Innovations LLP. Made with <Heart className="w-4 h-4 text-red-500 animate-pulse" /> for digital excellence.
-            </p>
-            <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-              {[
-                "Privacy Policy",
-                "Terms of Service", 
-                "Cookie Policy"
-              ].map((link, index) => (
-                <a key={index} href="#" className="hover:text-primary transition-all duration-300 hover:scale-105">
-                  {link}
-                </a>
-              ))}
-            </div>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h4 className="font-medium mb-3">Company</h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/about" className="hover:underline">About</Link></li>
+            <li><Link to="/careers" className="hover:underline">Careers</Link></li>
+            <li><Link to="/projects" className="hover:underline">Projects</Link></li>
+            <li><Link to="/blog" className="hover:underline">Blog</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-medium mb-3">Services</h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/services" className="hover:underline">Web & Mobile</Link></li>
+            <li><Link to="/services" className="hover:underline">AI Integration</Link></li>
+            <li><Link to="/services" className="hover:underline">Cloud & DevOps</Link></li>
+            <li><Link to="/services" className="hover:underline">Design & UX</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-medium mb-3">Legal</h4>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/privacy" className="hover:underline">Privacy Policy</Link></li>
+            <li><Link to="/terms" className="hover:underline">Terms of Service</Link></li>
+            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t py-4 text-center text-xs text-muted-foreground">
+        © {new Date().getFullYear()} DVV Innovations LLP. All rights reserved.
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
