@@ -159,3 +159,9 @@
 .animate-fadeUp {
   animation: fadeUp 0.9s ease-out forwards;
 }
+
+.hero-highlight {
+    display: block;
+    margin: 0.5rem 7rem;
+    padding: 11px 10px;
+}

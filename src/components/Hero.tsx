@@ -41,10 +41,8 @@ const Hero = () => {
           {/* Main Heading */}
           <AnimatedSection animation="scale-in" delay={400}>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-tight">
-                  <HeroLetters text="Transforming Ideas Into" />
-
-              <span className="text-transparent bg-gradient-primary bg-clip-text animate-glow">
-                {" "}
+              <HeroLetters text="Transforming Ideas Into" />
+              <span className="block hero-highlight text-transparent bg-gradient-primary bg-clip-text animate-glow">
                 Digital Excellence
               </span>
             </h1>
