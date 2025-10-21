@@ -55,7 +55,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} DVV Innovations. All rights reserved.
+        © {new Date().getFullYear()} DVV Innovations LLP. All rights reserved.
       </div>
     </footer>
   );

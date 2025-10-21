@@ -53,13 +53,17 @@ export default function ProjectsPage() {
       <main className="container mx-auto px-6 py-16">
         {/* Section header with same spacing/typography as home */}
         <AnimatedSection>
-          <Badge className="mb-3">Projects</Badge>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Work that speaks louder than words
-          </h1>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
-            A few representative engagements. Want the full tour? We’ll walk you through live demos and results.
-          </p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+              <span className="text-sm font-medium text-primary">Projects</span>
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+              Work that speaks louder than words
+            </h1>
+            <p className="mt-4 max-w-3xl text-muted-foreground">
+              A few representative engagements. Want the full tour? We’ll walk you through live demos and results.
+            </p>
+          </div>
         </AnimatedSection>
 
         {/* Image-led grid that matches card look/feel from home */}

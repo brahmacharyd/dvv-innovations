@@ -56,13 +56,17 @@ export default function PrivacyPage() {
       <main className="container mx-auto px-6 py-16">
         {/* Heading */}
         <AnimatedSection>
-          <Badge className="mb-3">Privacy</Badge>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Privacy Policy</h1>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
-            Your trust matters. This page explains what we collect, why we collect it, and how you can control your information.
-            We keep data minimal, secure, and used only for clear, lawful purposes.
-          </p>
-          <p className="mt-2 text-xs text-muted-foreground">Last updated: {lastUpdated}</p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+              <span className="text-sm font-medium text-primary">Privacy</span>
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Privacy Policy</h1>
+            <p className="mt-4 max-w-3xl text-muted-foreground">
+              Your trust matters. This page explains what we collect, why we collect it, and how you can control your information.
+              We keep data minimal, secure, and used only for clear, lawful purposes.
+            </p>
+            <p className="mt-2 text-xs text-muted-foreground">Last updated: {lastUpdated}</p>
+          </div>
         </AnimatedSection>
 
         {/* Summary tiles */}

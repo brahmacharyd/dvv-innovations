@@ -17,7 +17,10 @@ export default function TermsPage() {
       <main className="container mx-auto px-6 py-16">
         {/* Header Section */}
         <AnimatedSection>
-          <Badge className="mb-3">Terms</Badge>
+         <div className="text-center max-w-3xl mx-auto">
+    <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+      <span className="text-sm font-medium text-primary">Terms</span>
+    </div>
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
             Terms of Service
           </h1>
@@ -27,11 +30,12 @@ export default function TermsPage() {
             agreement between you and DVV Innovations.
           </p>
           <p className="mt-2 text-xs text-muted-foreground">Last updated: {lastUpdated}</p>
+          </div>
         </AnimatedSection>
 
         {/* Overview Cards */}
         <AnimatedSection>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="text-center max-w-3xl mx-auto mb-6">
             <Card className="bg-card/60 backdrop-blur supports-[backdrop-filter]:bg-card/50">
               <CardHeader className="flex flex-row items-center gap-3">
                 <ScrollText className="h-5 w-5 text-primary" />

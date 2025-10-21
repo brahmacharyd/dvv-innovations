@@ -153,7 +153,6 @@ const About = () => {
   <div className="text-center mb-16">
     <h3 className="text-4xl font-bold text-foreground mb-3 relative inline-block">
       Our Core Values
-      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mt-2"></span>
     </h3>
     <p className="text-muted-foreground max-w-2xl mx-auto mt-6 text-lg leading-relaxed">
       The principles that drive our innovation, shape our decisions, and define how we

@@ -92,11 +92,15 @@ export default function BlogPage() {
       <Header />
       <main className="container mx-auto px-6 py-16">
         {/* Compact header (distinct from About) */}
-        <AnimatedSection>
-          <div className="mb-6">
-            <Badge className="mb-3">Blog</Badge>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">Engineering Journal</h1>
-            <p className="mt-2 max-w-3xl text-sm text-muted-foreground">
+        <AnimatedSection animation="fade-in" delay={200}>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+              <span className="text-sm font-medium text-primary">Blog</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-3 animate-fadeUp">
+              Engineering Journal
+            </h1>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed animate-fadeUp delay-200">
               Practical notes from our work in frontend, AI, and platform engineering.
             </p>
           </div>
@@ -121,9 +125,8 @@ export default function BlogPage() {
                     {CATEGORIES.map(c => (
                       <span
                         key={c}
-                        className={`cursor-default rounded-full border px-2.5 py-1 text-xs ${
-                          c === currentCategory ? "bg-primary text-primary-foreground border-transparent" : "text-muted-foreground"
-                        }`}
+                        className={`cursor-default rounded-full border px-2.5 py-1 text-xs ${c === currentCategory ? "bg-primary text-primary-foreground border-transparent" : "text-muted-foreground"
+                          }`}
                       >
                         {c}
                       </span>

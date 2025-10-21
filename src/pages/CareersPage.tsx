@@ -45,14 +45,18 @@ export default function CareersPage() {
       <main className="container mx-auto px-6 py-16">
         {/* Hero */}
         <AnimatedSection>
-          <Badge className="mb-3">Careers</Badge>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Build tomorrow with us
-          </h1>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
-            We’re not just hiring developers — we’re bringing together people who love solving hard problems, designing better
-            experiences, and shipping real impact.
-          </p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+              <span className="text-sm font-medium text-primary">Careers</span>
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+              Build tomorrow with us
+            </h1>
+            <p className="mt-4 max-w-3xl text-muted-foreground">
+              We’re not just hiring developers — we’re bringing together people who love solving hard problems, designing better
+              experiences, and shipping real impact.
+            </p>
+          </div>
         </AnimatedSection>
 
         {/* Hero Image */}

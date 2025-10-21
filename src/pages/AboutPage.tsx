@@ -35,23 +35,23 @@ export default function AboutPage() {
     },
   ];
 
- const story = [
-  {
-    year: "2025",
-    title: "Founded",
-    text: "DVV Innovations began its journey in 2025 with a vision to create intelligent, scalable, and design-driven digital experiences."
-  },
-  {
-    year: "2025 Q2",
-    title: "First Deliverables",
-    text: "Launched initial client projects in web and AI-assisted platforms, emphasizing speed, usability, and modern architecture."
-  },
-  {
-    year: "2025 Q4",
-    title: "Product Expansion",
-    text: "Evolved into a full-service innovation partner, integrating AI solutions, cloud optimization, and next-gen UI frameworks."
-  }
-];
+  const story = [
+    {
+      year: "2025",
+      title: "Founded",
+      text: "DVV Innovations began its journey in 2025 with a vision to create intelligent, scalable, and design-driven digital experiences."
+    },
+    {
+      year: "2025 Q2",
+      title: "First Deliverables",
+      text: "Launched initial client projects in web and AI-assisted platforms, emphasizing speed, usability, and modern architecture."
+    },
+    {
+      year: "2025 Q4",
+      title: "Product Expansion",
+      text: "Evolved into a full-service innovation partner, integrating AI solutions, cloud optimization, and next-gen UI frameworks."
+    }
+  ];
 
   const stats = [
     { label: "Avg Lighthouse", value: "90+" },
@@ -73,16 +73,20 @@ export default function AboutPage() {
 
       <main className="container mx-auto px-6 py-16">
         {/* Intro */}
-        <AnimatedSection>
-          <Badge className="mb-3">About us</Badge>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Where vision meets velocity
-          </h1>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
-            DVV Innovations is a studio of passionate creators building the next generation of digital
-            experiences—from scalable web platforms to intelligent assistants. We keep tech simple, fast, and
-            purposeful so users love using it and teams love maintaining it.
-          </p>
+        <AnimatedSection animation="fade-in" delay={200}>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+              <span className="text-sm font-medium text-primary">About Us</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground mb-4 animate-fadeUp">
+              Where vision meets velocity
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              DVV Innovations is a studio of passionate creators building the next generation of digital
+              experiences — from scalable web platforms to intelligent assistants. We keep tech simple, fast,
+              and purposeful so users love using it and teams love maintaining it.
+            </p>
+          </div>
         </AnimatedSection>
 
         {/* Hero banner (subtle, on-brand) */}

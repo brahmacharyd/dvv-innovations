@@ -18,15 +18,19 @@ export default function ContactPage() {
       <main className="container mx-auto px-6 py-16">
         {/* Hero */}
         <AnimatedSection>
-          <Badge className="mb-3">Contact Us</Badge>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            Let’s build something exceptional together
-          </h1>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
-            Whether you’re exploring a new project, need expert advice, or just want to collaborate, 
-            our team is here to help. Every great partnership starts with a conversation — 
-            reach out, and we’ll get back to you within one business day.
-          </p>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300 hover:scale-105">
+              <span className="text-sm font-medium text-primary">Contact Us</span>
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+              Let’s build something exceptional together
+            </h1>
+            <p className="mt-4 max-w-3xl text-muted-foreground">
+              Whether you’re exploring a new project, need expert advice, or just want to collaborate,
+              our team is here to help. Every great partnership starts with a conversation —
+              reach out, and we’ll get back to you within one business day.
+            </p>
+          </div>
         </AnimatedSection>
 
         {/* Hero Image */}
