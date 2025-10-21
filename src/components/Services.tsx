@@ -1,150 +1,157 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import AnimatedSection from "@/components/AnimatedSection";
 import { 
-  Code2, 
-  Smartphone, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Users, 
-  Palette, 
-  BarChart3, 
-  Cog,
-  Import,
-  Zap,
-  Shield
+  Code2, Smartphone, Globe, Brain, Cloud, Users, Palette,
+  BarChart3, Cog, Import, Zap, Shield
 } from "lucide-react";
-import digitalTransformation from "@/assets/digital-transformation.jpg";
+import digitalTransformation from "@/assets/digital-transformation-service.jpg";
 import aiVisualization from "@/assets/ai-visualization.jpg";
-import cloudInfrastructure from "@/assets/cloud-infrastructure.jpg";
+import cloudInfrastructure from "@/assets/cloud-infrastructure-service.jpg";
+import teamCollaboration from "@/assets/team-workspace-service.jpg";
+import mobileApp from "@/assets/mobile-app.jpg";
+import webTech from "@/assets/hero-tech.jpg";
+import analytics from "@/assets/data-analytics.jpg";
+import uxDesign from "@/assets/design-creative.jpg";
+import consulting from "@/assets/consulting.jpg";
+import systemArch from "@/assets/system-architecture.jpg";
+import security from "@/assets/security.jpg";
+import softwareImport from "@/assets/software-licensing.jpg";
 
 const Services = () => {
   const services = [
     {
       icon: Code2,
       title: "Software Development",
-      description: "Custom software applications designed to meet your unique business requirements with cutting-edge technology.",
-      featured: true,
+      description:
+        "Custom applications built on modern frameworks to meet complex business needs with scalability and reliability.",
       image: digitalTransformation
     },
     {
       icon: Smartphone,
-      title: "Mobile App Development", 
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices."
+      title: "Mobile App Development",
+      description:
+        "Native and hybrid mobile solutions for seamless cross-device experiences on iOS and Android.",
+      image: mobileApp
     },
     {
       icon: Globe,
       title: "Web Development",
-      description: "Modern, responsive websites and web applications built with the latest frameworks and best practices."
+      description:
+        "Fast, accessible, SEO-optimized websites and web applications using cutting-edge frontend technologies.",
+      image: webTech
     },
     {
       icon: Brain,
       title: "AI-Driven Platforms",
-      description: "Intelligent systems and machine learning solutions that automate processes and provide valuable insights.",
-      featured: true,
+      description:
+        "From chatbots to intelligent data systems — integrating AI models that enhance business decision-making.",
       image: aiVisualization
     },
     {
       icon: Cloud,
-      title: "Cloud Solutions", 
-      description: "Scalable cloud infrastructure, migration services, and cloud-native application development.",
-      featured: true,
+      title: "Cloud Solutions",
+      description:
+        "Cloud-native architecture, migrations, and DevOps pipelines for reliable and cost-efficient infrastructure.",
       image: cloudInfrastructure
     },
     {
       icon: Users,
       title: "IT Consulting",
-      description: "Strategic technology consulting to align your IT infrastructure with business objectives."
+      description:
+        "Strategic IT advisory to align technology, architecture, and operations with your long-term business goals.",
+      image: consulting
     },
     {
       icon: Cog,
       title: "System Architecture",
-      description: "Robust, scalable system design and architecture planning for enterprise-level applications."
+      description:
+        "Blueprints for scalable, secure systems — ensuring performance, modularity, and long-term sustainability.",
+      image: systemArch
     },
     {
       icon: Palette,
       title: "UI/UX Design",
-      description: "User-centered design that creates intuitive, engaging experiences across digital platforms."
+      description:
+        "Human-centered design with cohesive systems, intuitive interfaces, and delightful experiences.",
+      image: uxDesign
     },
     {
       icon: BarChart3,
       title: "Data Analytics",
-      description: "Transform raw data into actionable insights with advanced analytics and visualization tools."
+      description:
+        "ETL pipelines and visual dashboards that turn raw data into actionable business insights.",
+      image: analytics
     },
     {
       icon: Zap,
       title: "Digital Transformation",
-      description: "End-to-end digital transformation services to modernize your business processes and technology."
+      description:
+        "Reimagining legacy processes and systems to create connected, intelligent, and agile organizations.",
+      image: teamCollaboration
     },
     {
       icon: Import,
       title: "Software Licensing & Distribution",
-      description: "Import, export, licensing, and distribution of software products for global market reach."
+      description:
+        "End-to-end software distribution, licensing, and compliance management for global markets.",
+      image: softwareImport
     },
     {
       icon: Shield,
       title: "Testing & Deployment",
-      description: "Comprehensive testing, secure deployment, and ongoing maintenance for all digital solutions."
-    }
+      description:
+        "Comprehensive QA automation, deployment strategies, and CI/CD implementation for zero-downtime releases.",
+      image: security
+    },
   ];
 
   return (
-    <section id="services" className="py-24 bg-background relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
-        <div className="absolute bottom-40 right-20 w-40 h-40 bg-accent rounded-full blur-3xl"></div>
-      </div>
-      
+    <section id="services" className="relative overflow-hidden py-24 bg-background">
+      {/* background gradient glow */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-muted/20 to-background"></div>
+
       <div className="container mx-auto px-6 relative">
+        {/* header */}
         <AnimatedSection animation="fade-in">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 hover:bg-primary/20 transition-all duration-300">
-              <Cog className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary font-medium">Our Services</span>
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 mb-6">
+              <Cog className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Our Expertise</span>
             </div>
-            
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Comprehensive Technology Solutions
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+              Complete Digital Engineering Services
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From concept to deployment, we provide end-to-end technology services 
-              that drive innovation and accelerate business growth.
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              We combine innovation, technology, and design to help businesses build intelligent,
+              scalable, and visually exceptional digital solutions.
             </p>
           </div>
         </AnimatedSection>
 
+        {/* grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const delay = index * 100;
-            
+            const delay = index * 80;
+
             return (
               <AnimatedSection key={index} animation="fade-in" delay={delay}>
-                <Card className={`bg-gradient-card border-border/50 hover:shadow-card transition-all duration-500 hover:scale-105 group overflow-hidden ${
-                  service.featured ? 'md:col-span-1 lg:col-span-1' : ''
-                }`}>
-                  {service.image && (
-                    <div className="relative h-48 overflow-hidden">
-                      <img 
-                        src={service.image} 
-                        alt={service.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent"></div>
-                      <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                        <Icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
+                <Card className="group overflow-hidden border border-border/50 bg-card/60 backdrop-blur-sm hover:shadow-xl transition-all duration-500 rounded-2xl hover:-translate-y-1">
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/40 to-transparent"></div>
+                    <div className="absolute top-4 right-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/90 text-primary-foreground shadow-lg group-hover:rotate-3 transition-transform duration-300">
+                      <Icon className="h-6 w-6" />
                     </div>
-                  )}
-                  
-                  <CardHeader className={service.image ? 'pt-4' : ''}>
-                    {!service.image && (
-                      <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4 group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
-                        <Icon className="w-6 h-6 text-primary-foreground" />
-                      </div>
-                    )}
-                    <CardTitle className="text-foreground group-hover:text-primary transition-all duration-300">
+                  </div>
+
+                  <CardHeader>
+                    <CardTitle className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
                       {service.title}
                     </CardTitle>
                   </CardHeader>
@@ -159,18 +166,18 @@ const Services = () => {
           })}
         </div>
 
+        {/* bottom note */}
         <AnimatedSection animation="fade-in" delay={1600}>
-          <div className="text-center mt-16">
-            <div className="inline-flex items-center gap-4 p-6 bg-gradient-card border border-border/50 rounded-xl hover:shadow-card transition-all duration-300">
+          <div className="text-center mt-20">
+            <div className="inline-flex items-center gap-3 bg-muted/40 border border-border/40 px-6 py-4 rounded-2xl backdrop-blur-sm">
               <div className="flex -space-x-2">
-                <div className="w-8 h-8 bg-gradient-primary rounded-full border-2 border-background"></div>
+                <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-full border-2 border-background"></div>
                 <div className="w-8 h-8 bg-accent rounded-full border-2 border-background"></div>
-                <div className="w-8 h-8 bg-primary-glow rounded-full border-2 border-background"></div>
+                <div className="w-8 h-8 bg-primary rounded-full border-2 border-background"></div>
               </div>
-              <div>
-                <p className="text-foreground font-semibold">Ready to get started?</p>
-                <p className="text-sm text-muted-foreground">Contact us for a free consultation</p>
-              </div>
+              <p className="text-sm text-muted-foreground font-medium">
+                Every service is customizable — built around your product vision.
+              </p>
             </div>
           </div>
         </AnimatedSection>

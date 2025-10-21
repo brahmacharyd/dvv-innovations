@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/dvv-icon-with-innovations.svg"; 
 
 const nav = [
   { to: "/", label: "Home" },
@@ -28,7 +29,9 @@ export default function Header() {
       onClick={() => setOpen(false)}
       className={({ isActive }) =>
         `px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-          isActive ? "bg-primary text-primary-foreground" : "text-foreground hover:bg-muted"
+          isActive
+            ? "bg-primary text-primary-foreground"
+            : "text-foreground hover:bg-muted"
         }`
       }
     >
@@ -37,25 +40,46 @@ export default function Header() {
   );
 
   return (
-    <header className={`sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70 ${scrolled ? "border-b" : ""}`}>
-      <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <Link to="/" className="font-semibold text-lg">DVV Innovations</Link>
+    <header
+      className={`sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-background/70 ${
+        scrolled ? "border-b" : ""
+      }`}
+    >
+      <div className="container mx-auto flex items-center justify-between py-3">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="DVV Innovations logo"
+            className="h-12 w-auto select-none"
+            draggable="false"
+          />
+        </Link>
 
-        {/* Desktop */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
-          {nav.map(n => <Item key={n.to} to={n.to} label={n.label} />)}
+          {nav.map((n) => (
+            <Item key={n.to} to={n.to} label={n.label} />
+          ))}
         </nav>
 
-        {/* Mobile */}
-        <button className="md:hidden p-2 rounded-lg hover:bg-muted" aria-label="Toggle Menu" onClick={() => setOpen(v => !v)}>
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 rounded-lg hover:bg-muted"
+          aria-label="Toggle Menu"
+          onClick={() => setOpen((v) => !v)}
+        >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {open && (
         <div className="md:hidden border-t bg-background">
           <div className="container mx-auto px-4 py-2 flex flex-col">
-            {nav.map(n => <Item key={n.to} to={n.to} label={n.label} />)}
+            {nav.map((n) => (
+              <Item key={n.to} to={n.to} label={n.label} />
+            ))}
           </div>
         </div>
       )}

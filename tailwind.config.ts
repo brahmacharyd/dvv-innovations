@@ -7,7 +7,6 @@ const config: Config = {
   content: [
     "./index.html",
     "./src/**/*.{ts,tsx}",
-    // (keep these only if you actually have these folders in Vite)
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",

@@ -35,11 +35,23 @@ export default function AboutPage() {
     },
   ];
 
-  const story = [
-    { year: "2023", title: "Founding", text: "DVV Innovations LLP starts with a mission: modern web + pragmatic AI." },
-    { year: "2024", title: "First wave", text: "Shipped multiple Angular/React platforms with CI/CD and design systems." },
-    { year: "2025", title: "AI acceleration", text: "LLM assistants, RAG pipelines, and analytics become core offerings." },
-  ];
+ const story = [
+  {
+    year: "2025",
+    title: "Founded",
+    text: "DVV Innovations began its journey in 2025 with a vision to create intelligent, scalable, and design-driven digital experiences."
+  },
+  {
+    year: "2025 Q2",
+    title: "First Deliverables",
+    text: "Launched initial client projects in web and AI-assisted platforms, emphasizing speed, usability, and modern architecture."
+  },
+  {
+    year: "2025 Q4",
+    title: "Product Expansion",
+    text: "Evolved into a full-service innovation partner, integrating AI solutions, cloud optimization, and next-gen UI frameworks."
+  }
+];
 
   const stats = [
     { label: "Avg Lighthouse", value: "90+" },
@@ -67,7 +79,7 @@ export default function AboutPage() {
             Where vision meets velocity
           </h1>
           <p className="mt-4 max-w-3xl text-muted-foreground">
-            DVV Innovations LLP is a studio of passionate creators building the next generation of digital
+            DVV Innovations is a studio of passionate creators building the next generation of digital
             experiences—from scalable web platforms to intelligent assistants. We keep tech simple, fast, and
             purposeful so users love using it and teams love maintaining it.
           </p>

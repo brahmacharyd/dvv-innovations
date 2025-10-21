@@ -13,6 +13,7 @@ import ProjectsPage from "./pages/ProjectsPage";
 import BlogPage from "./pages/BlogPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import TermsPage from "./pages/TermsPage";
+import ScrollToTopRoute from "./components/ScrollToTopRoute";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,8 @@ const App = () => (
       <Sonner />
       <Toaster />
       <BrowserRouter>
+            <ScrollToTopRoute />
+
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<AboutPage />} />
@@ -34,6 +37,8 @@ const App = () => (
           <Route path="/terms" element={<TermsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+              <ScrollToTopRoute />
+
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t mt-16">
       <div className="container mx-auto px-6 py-10 grid gap-8 md:grid-cols-4">
         <div>
-          <h3 className="font-semibold mb-3">DVV Innovations LLP</h3>
+          <h3 className="font-semibold mb-3">DVV Innovations</h3>
           <p className="text-sm text-muted-foreground">Digital Visionary Ventures — modern web & AI solutions.</p>
         </div>
         <div>
@@ -20,10 +20,10 @@ export default function Footer() {
         <div>
           <h4 className="font-medium mb-3">Services</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/services" className="hover:underline">Web & Mobile</Link></li>
-            <li><Link to="/services" className="hover:underline">AI Integration</Link></li>
-            <li><Link to="/services" className="hover:underline">Cloud & DevOps</Link></li>
-            <li><Link to="/services" className="hover:underline">Design & UX</Link></li>
+            <li><a href="/services#frontend" className="hover:underline">Web & Mobile</a></li>
+            <li><a href="/services#ai" className="hover:underline">AI Integration</a></li>
+            <li><a href="/services#cloud" className="hover:underline">Cloud & DevOps</a></li>
+            <li><a href="/services#design" className="hover:underline">Design & UX</a></li>
           </ul>
         </div>
         <div>
@@ -36,7 +36,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t py-4 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} DVV Innovations LLP. All rights reserved.
+        © {new Date().getFullYear()} DVV Innovations. All rights reserved.
       </div>
     </footer>
   );
